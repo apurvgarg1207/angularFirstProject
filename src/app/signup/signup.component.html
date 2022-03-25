@@ -1,2 +1,12 @@
 <p>signup works!</p>
+UniqueName : <input type="text" [(ngModel)]="userUniqueName"    /><br><br>
+Name : <input type="text" [(ngModel)]="userName"/> <br><br>
+Address : <input type="text" [(ngModel)]="userAddress"/><br><br>
+Email : <input type="text"  [(ngModel)]="userEmail"  /><br><br>
+Password : <input type="password"  [(ngModel)]="password"  /><br><br>
+<input type="text" [(ngModel)]="role" hidden/>
+Contact Number : <input type="number" [(ngModel)]="cNumber"/><br><br>
+
+<input type="submit" value="Signup" (click)="saveuser()"/><br><br>
+
 <a routerLink="/login">Login</a>

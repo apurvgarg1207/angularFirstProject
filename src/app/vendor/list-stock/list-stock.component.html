@@ -1,0 +1,158 @@
+<div class="container-scroller">
+    <app-admin-header></app-admin-header>
+
+    <div class="container-fluid page-body-wrapper pt-0 proBanner-padding-top">
+        <app-right-sidebar></app-right-sidebar>
+        <app-vendor-sidebar></app-vendor-sidebar>
+        <!-- //main Body -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="dataTables_length bs-select" id="dtHorizontalExample_length">
+                            <label>Show
+                                <select name="dtHorizontalExample_length" aria-controls="dtHorizontalExample"
+                                    class="custom-select custom-select-sm form-control form-control-sm">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select> entries
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div id="dtHorizontalExample_filter" class="dataTables_filter"><label>Search:<input
+                                    type="search" class="form-control form-control-sm" placeholder=""
+                                    aria-controls="dtHorizontalExample"></label></div>
+                    </div>
+                </div>
+
+                <app-admin-header></app-admin-header>
+
+                <div class="dataTables_scroll row" style="position: relative; overflow: auto; width: 100%;">
+                    <table border="1" id="table_id"
+                        class="table table-striped table-bordered dt-responsive nowrap dataTable no-footer dtr-inline collapsed table-responsive table-sm"
+                        style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Code</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Name</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Type</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Size</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Thickness</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Regular Degine Quantity</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Light Box</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Dark BOx</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    HL 1</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    HL 2</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    HL 3</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Anti Skrit Flour</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Work Done By Box</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Discripction</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Date</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Batch</th>
+                                <th class="dt-body-right sorting" tabindex="0" aria-controls="example" rowspan="1"
+                                    colspan="1" style="width: ;" aria-label="Salary: activate to sort column ascending">
+                                    Stocker Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let list of lists">
+                                <td>{{list.tCode}}</td>
+                                <td>{{list.tName}}</td>
+                                <td>{{list.tType}}</td>
+                                <td>{{list.tSize}}</td>
+                                <td>{{list.tThickness}}</td>
+                                <td>{{list.tQuantity}}</td>
+                                <td>{{list.tL}}</td>
+                                <td>{{list.tD}}</td>
+                                <td>{{list.hl1}}</td>
+                                <td>{{list.hl2}}</td>
+                                <td>{{list.hl3}}</td>
+                                <td>{{list.flour}}</td>
+                                <td>{{list.tWork}}</td>
+                                <td>{{list.tDiscripsion}}</td>
+                                <td>{{list.date}}</td>
+                                <td>{{list.batch}}</td>
+                                <td>{{list.userUniqueName}}</td>
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10
+                            of 57 entries</div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="example_paginate">
+                            <table border="1">
+                                <tr class="pagination">
+                                    <thead>
+                                        <th class="paginate_button previous disabled" id="example_previous"><a href="#"
+                                                aria-controls="example" data-dt-idx="0" tabindex="0">Previous</a></th>
+                                        <th class="paginate_button active"><a href="#" aria-controls="example"
+                                                data-dt-idx="1" tabindex="0">1</a></th>
+                                        <th class="paginate_button "><a href="#" aria-controls="example" data-dt-idx="2"
+                                                tabindex="0">2</a></th>
+                                        <th class="paginate_button "><a href="#" aria-controls="example" data-dt-idx="3"
+                                                tabindex="0">3</a></th>
+                                        <th class="paginate_button "><a href="#" aria-controls="example" data-dt-idx="4"
+                                                tabindex="0">4</a></th>
+                                        <th class="paginate_button "><a href="#" aria-controls="example" data-dt-idx="5"
+                                                tabindex="0">5</a></th>
+                                        <th class="paginate_button "><a href="#" aria-controls="example" data-dt-idx="6"
+                                                tabindex="0">6</a></th>
+                                        <th class="paginate_button next" id="example_next"><a href="#"
+                                                aria-controls="example" data-dt-idx="7" tabindex="0">Next</a></th>
+                                    </thead>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <app-footer></app-footer>
+            </div>
+
+        </div>
+    </div>
+</div>

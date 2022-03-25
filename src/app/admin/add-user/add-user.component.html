@@ -1,0 +1,25 @@
+<p>add-user works!</p>
+<p>signup works!</p>
+UniqueName : <input type="text" [(ngModel)]="userUniqueName" /><br><br>
+
+Name : <input type="text" [(ngModel)]="userName" /> <br><br>
+
+Gender : Male <input type="radio" [(ngModel)]="gender" name="gender" value="male" />
+Female <input type="radio" [(ngModel)]="gender" name="gender" value="female" />
+
+<br><br>
+
+Address : <input type="text" [(ngModel)]="userAddress" /><br><br>
+
+Email : <input type="text" [(ngModel)]="userEmail" /><br><br>
+
+Password : <input type="password" [(ngModel)]="password" /><br><br>
+
+Role :  <select [(ngModel)]="role">
+        <option *ngFor="let r of roles" value="{{r._id}}"> {{r.roleName}} </option>
+        </select><br><br>
+
+Contact Number : <input type="number" [(ngModel)]="cNumber" /><br><br>
+
+<button (click)="saveUser()">Save User</button><br><br>
+

@@ -1,0 +1,17 @@
+<app-admin-header></app-admin-header>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Role-Id</th>
+            <th>Role-Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let role of roles">
+            <td>{{role._id}}</td>
+            <td>{{role.roleName}}</td>
+            <td><button (click)="editRole(role._id)">Edit</button>|<input type="submit" value="delete" (click)="deleterole(role._id)"></td>
+        </tr>
+    </tbody>
+</table>

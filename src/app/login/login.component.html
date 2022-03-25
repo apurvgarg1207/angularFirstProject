@@ -1,9 +1,9 @@
 <h2>Login</h2>
 
-Email : <input type="text"/> <br><br>
+Email : <input type="text" [(ngModel)]="email"/> <br><br>
 
-Password : <input type="password"/><br><br>
+Password : <input type="password" [(ngModel)]="password"/><br><br>
 
-<input type="submit" value="Login"/><br><br>
+<input type="submit" value="Login" (click)="login()"/><br><br>
 
-<a routerLink="/signup">Signup</a>
+<a routerLink="/signup">Signup</a> 
